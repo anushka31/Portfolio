@@ -1,0 +1,52 @@
+@font-face{
+    font-family: heading;
+    src: url('../../Assets/Fonts/Zector.otf');
+}
+.team{
+    & h2{
+        font-family: heading;
+        font-weight: 1500;
+        font-size: 35px;
+        text-decoration: underline;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-family: heading;
+        font-weight: 1000;
+        grid-gap: 50px;
+        & div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & span{
+                margin-top: 10px;
+            }
+            & img{
+                height: 19em;
+                width: 15em;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: '1000px'){
+    .team{
+        & div{
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 300px;
+            & div{
+                & img{
+                    height: 14em;
+                    width: 10em;
+                }
+            }
+        }
+    }
+}
